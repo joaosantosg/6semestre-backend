@@ -1,66 +1,77 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Sistema de Pizzaria
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+**Disciplina:** API Backend  
+**Aluno:** João Victor Guimarães Santos  
+**Tecnologias:** Laravel 11, PHP 8.2  
 
-## About Laravel
+## Descrição do Projeto
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Este projeto é um sistema de pizzaria desenvolvido como parte da disciplina de API Backend. O sistema foi construído utilizando o framework Laravel na versão 11, com PHP 8.2. O objetivo do sistema é gerenciar pedidos de pizza, cardápios, usuários e entrega de forma eficiente e organizada.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Funcionalidades
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- **Cadastro  de Usuários:** O sistema permite que novos usuários se cadastrem e façam login para acessar funcionalidades exclusivas.
 
-## Learning Laravel
+## Tecnologias Utilizadas
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- **Laravel 11:** Framework PHP para desenvolvimento de aplicações web robustas.
+- **PHP 8.2:** Linguagem de programação utilizada para o desenvolvimento do backend.
+- **MySQL:** Banco de dados relacional para armazenar informações de usuários, pedidos e cardápio.
+- **Composer:** Gerenciador de dependências para PHP, utilizado para instalar pacotes e bibliotecas necessárias para o projeto.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## Instalação
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Para rodar este projeto localmente, siga os passos abaixo:
 
-## Laravel Sponsors
+1. **Clone o repositório:**
+   ```bash
+   git clone https://github.com/joaosantosg/6semestre-backend
+   ```
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+2. **Acesse o diretório do projeto:**
+   ```bash
+   cd 6semestre-backend/sistema_pizzaria
+   ```
 
-### Premium Partners
+3. **Instale as dependências:**
+   ```bash
+   composer install
+   ```
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+4. **Configure o arquivo `.env`:**  
+   Copie o arquivo `.env.example` para `.env` e configure as variáveis de ambiente, incluindo a conexão com o banco de dados.
 
-## Contributing
+5. **Gere a chave da aplicação:**
+   ```bash
+   php artisan key:generate
+   ```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+6. **Execute as migrações do banco de dados:**
+   ```bash
+   php artisan migrate
+   ```
 
-## Code of Conduct
+7. **Inicie o servidor local:**
+   ```bash
+   php artisan serve
+   ```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+O sistema estará disponível em [http://localhost:8000](http://localhost:8000).
 
-## Security Vulnerabilities
+## Uso
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+- Acesse a aplicação pelo navegador.
+- Crie uma conta ou faça login com uma conta existente.
+- Navegue pelas funcionalidades de gerenciamento de cardápio, pedidos e entregas.
 
-## License
+## Estrutura do Projeto
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+O projeto segue a estrutura padrão do Laravel:
+
+- **app/**: Contém o código-fonte da aplicação, incluindo Models, Controllers e Services.
+- **config/**: Configurações gerais da aplicação.
+- **database/**: Migrações, seeds e factories do banco de dados.
+- **public/**: Arquivos públicos acessíveis, como CSS, JS e imagens.
+- **resources/**: Views e assets utilizados na aplicação.
+- **routes/**: Definição das rotas da aplicação.
+- **tests/**: Testes automatizados.

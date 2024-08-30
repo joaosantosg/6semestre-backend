@@ -10,10 +10,9 @@ use Illuminate\Http\Request;
  * Class UserController
  *
  * @package App\Http\Controllers
- * @author Vinícius Sarmento
- * @link https://github.com/ViniciusSCS
+ * @author Joao Santos
+ * @link https://github.com/joaosantosg/6semestre-backend
  * @date 2024-08-23 21:48:54
- * @copyright UniEVANGÉLICA
  */
 class UserController extends Controller
 {
