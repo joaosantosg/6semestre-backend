@@ -370,7 +370,10 @@ index_page_response  db "HTTP/1.1 200 OK", 13, 10
                      db "Connection: close", 13, 10
                      db 13, 10
                      db 0
-index_page_header    db "<h1>To-Do</h1>", 10
+index_page_header    db "<h1>Aplicação desenvolvida em Assembly</h1>", 10
+                     db "<h2>Lista de Tarefas</h2>", 10
+                     db "<ul>", 10
+                     db "<h3>Adicionar nova tarefa</h3>", 10
                      db "<ul>", 10
                      db 0
 index_page_footer    db "  <li>", 10
@@ -381,7 +384,7 @@ index_page_footer    db "  <li>", 10
                      db "  </li>", 10
                      db "</ul>", 10
                      db "<form method='post' action='/shutdown'>", 10
-                     db "    <input type='submit' value='shutdown'>", 10
+                     db "    <input type='submit' value='Desligar'>", 10
                      db "</form>", 10
                      db 0
 todo_header          db "  <li>"
